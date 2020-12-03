@@ -106,9 +106,7 @@ public class SpeechRecognitionPlugin implements MethodCallHandler, RecognitionLi
     }
 
     @Override
-    public void onRmsChanged(float rmsdB) {
-        //Log.d(LOG_TAG, "onRmsChanged : " + rmsdB);
-    }
+    public void onRmsChanged(float rmsdB) { }
 
     @Override
     public void onBufferReceived(byte[] buffer) {
@@ -123,6 +121,7 @@ public class SpeechRecognitionPlugin implements MethodCallHandler, RecognitionLi
 
     @Override
     public void onError(int error) {
+        Log.d(LOG_TAG, "onError : " + error);
         speechChannel.invokeMethod("speech.onSpeechAvailability", false);
         speechChannel.invokeMethod("speech.onError", error);
     }
