@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="bz.rxla.flutter.speechrecognition"
+  package="com.holyunicorn.speech_recognition"
   android:versionCode="1"
   android:versionName="0.0.1">
 
